@@ -40,55 +40,51 @@ typedef vector<int> vi;
 int main()
 {
     fast_io
-    int t , n , k , i ;
+    int t , n , k , i , j ;
     cin >> t ;
     while(t--)
     {
         cin >> n >> k ;
         string s ;
         cin >> s ;
-        int a[n] , b[n] = {0} ;
-        b[0] = s[0] -'0' ;
+        
         for(i=0;i<n;i++)
         {
-            a[i] = s[i] - '0' ;
-            if(i) b[i] = a[i] + b[i-1] ;
-            //cout << b[i] << space ;
+            if(s[i]=='1')
+            {
+                for(j=i+1;j<=i+k && j<n ;j++) s[j] = '2' ;
+                i = i+k-1;
+            }
         }
-        //cout << endl;
-        int dp[n+1] = {0} ;
-        bool flg = true ;
-        int mx = -1 ;
-        for(i=0;i<n;i++)
+        //cout << s << endl;
+        for(i=n-1;i>=0;i--)
         {
-            flg = true;
-            if(a[i]) {
-                dp[i]=max(mx,(i>=k?dp[i-k]:0));
-                if(mx<dp[i]) mx = dp[i] ;
-                continue;
-            }
-            
-            if(i<k && b[i]==b[0] && a[0]) flg = false;
-            if(i>k && b[i]>b[i-k-1])
+            if(s[i]=='1')
             {
-                flg = false;
+                for(j=i-1;j>=i-k && j>=0 ;j--) s[j] = '2' ;
+                i = i-k;
             }
-            if(i==k && b[i]==b[i-k] && b[i]!=0)
-            {
-                dp[i]=max(mx, dp[i-k]);
-                if(mx<dp[i]) mx = dp[i] ;
-                continue;
-            }
-            if(i<=n-1-k && b[i]<b[i+k]) flg = false ;
+        }
+        for(i=0;i<n;i++) if(s[i]=='2') s[i] = '1' ;
 
-            if(i>=n-k && b[i]<=b[n-1] && (a[n-1]) && b[i]!=b[i-k]) flg = false;
-            cout <<i << space << flg << " test\n";
-            dp[i] =max(mx, ((flg && !a[i]) ?1:0) + (i>k?dp[i-k-1]:0));
-            if(mx<dp[i]) mx = dp[i] ;
+        int ans = 0 ;
+        int cnt = 0 ;
+        //cout << s << endl;
+        for(i=0;i<n;i++)
+        {
+            if(s[i]=='0')
+            {
+                cnt++;
+            }
+            else
+            {
+                ans += ((cnt+k)/(k+1)) ;
+                cnt = 0; 
+            }
+            //cout << cnt << space;
         }
-        for(i=0;i<n;i++) cout << dp[i] <<space ;
-        cout << endl;
-        cout << dp[n-1] << endl;
+        if(cnt) ans += ((cnt+k)/(k+1)) ;
+        cout << ans << endl;
     }   
     
     
