@@ -20,9 +20,7 @@ using namespace std;
 typedef long long LL;
 typedef long long int int64;
 typedef unsigned long long int  uint64;
-typedef pair<int,int> pii;
-typedef vector<int> vi;
-typedef vector<pii> vpii;
+typedef vector<int> vi; 
 
 #define READ freopen("input.txt", "r", stdin);
 #define WRITE freopen("output.txt", "w", stdout);
@@ -36,16 +34,25 @@ typedef vector<pii> vpii;
 #define PB push_back
 #define INF (int)1e9
 #define MOD 1000000007
-#define PRECISION(x) cout << fixed << setprecision(x);
-#define rep(i,n) for(int ( i ) = ( 0 ) ;( i ) <( n );( i )++)
-#define rep2(i,a,b) for(int ( i ) = ( a ) ;( i ) <= ( b );( i )++)
+#define PRECISION(x) cout << fixed << setprecision(x); 
  
+LL mem[100];
+ LL num ( LL n )
+ {
+     if(n==0) return 2 ;
+     if(n==1) return 1 ;
+     if(mem[n]!=0) return mem[n];
+     mem[n] = num(n-1) + num(n-2);
+     return mem[n];
+ }
  
 int main()
 {
     fast_io
-    
-
+    LL n ;
+    cin >> n ;
+    cout << num(n) << endl;
+ 
     
     
     return 0;

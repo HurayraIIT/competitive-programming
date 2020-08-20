@@ -37,14 +37,26 @@ typedef vector<pii> vpii;
 #define INF (int)1e9
 #define MOD 1000000007
 #define PRECISION(x) cout << fixed << setprecision(x);
-#define rep(i,n) for(int ( i ) = ( 0 ) ;( i ) <( n );( i )++)
-#define rep2(i,a,b) for(int ( i ) = ( a ) ;( i ) <= ( b );( i )++)
- 
- 
+#define rep(i,a,n) for(int ( i ) = ( a ) ;( i ) <( n );( i )++)
+
+LL dig ( LL n )
+{
+    LL cnt = 0 ;
+    while(n)
+    {
+        cnt+=n%10;
+        n /= 10 ;
+    }
+    return cnt ;
+}
 int main()
 {
     fast_io
     
+    LL n ;
+    cin>> n ;
+    if(n%dig(n)==0) cout << "Yes\n";
+    else cout << "No\n";
 
     
     

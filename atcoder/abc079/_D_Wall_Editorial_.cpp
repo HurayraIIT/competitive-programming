@@ -37,17 +37,38 @@ typedef vector<pii> vpii;
 #define INF (int)1e9
 #define MOD 1000000007
 #define PRECISION(x) cout << fixed << setprecision(x);
-#define rep(i,n) for(int ( i ) = ( 0 ) ;( i ) <( n );( i )++)
-#define rep2(i,a,b) for(int ( i ) = ( a ) ;( i ) <= ( b );( i )++)
+#define rep(i,a,n) for(int ( i ) = ( a ) ;( i ) <( n );( i )++)
  
  
 int main()
 {
     fast_io
     
+    int h,w;
+    cin >> h >> w ;
 
-    
-    
+    int c[11][11] ;
+    rep(i,0,10) rep(j,0,10) cin >> c[i][j];
+
+    int a[h+1][w+1] ;
+    rep(i,1,h+1) rep(j,1,w+1) cin >> a[i][j] ;
+
+    rep(k,0,10) rep(i,0,10) rep(j,0,10) c[i][j] = min(c[i][j],c[i][k]+c[k][j]);
+
+    /*
+    rep(i,0,10)
+    {
+        rep(j,0,10) cout << c[i][j] << " ";
+        cout << endl;
+    }
+    */
+
+    int sum = 0 ;
+    rep(i,1,h+1) rep(j,1,w+1) sum += (a[i][j]>=0?c[a[i][j]][1]:0);
+
+    cout << sum << endl;
+
+
     return 0;
 }
 

@@ -20,9 +20,7 @@ using namespace std;
 typedef long long LL;
 typedef long long int int64;
 typedef unsigned long long int  uint64;
-typedef pair<int,int> pii;
-typedef vector<int> vi;
-typedef vector<pii> vpii;
+typedef vector<int> vi; 
 
 #define READ freopen("input.txt", "r", stdin);
 #define WRITE freopen("output.txt", "w", stdout);
@@ -36,15 +34,24 @@ typedef vector<pii> vpii;
 #define PB push_back
 #define INF (int)1e9
 #define MOD 1000000007
-#define PRECISION(x) cout << fixed << setprecision(x);
-#define rep(i,n) for(int ( i ) = ( 0 ) ;( i ) <( n );( i )++)
-#define rep2(i,a,b) for(int ( i ) = ( a ) ;( i ) <= ( b );( i )++)
+#define PRECISION(x) cout << fixed << setprecision(x); 
  
  
 int main()
 {
     fast_io
-    
+    string s ;
+    cin >> s ;
+    int a = s[0]-'0', b = s[1]-'0' , c = s[2]-'0' , d = s[3]-'0' ;
+
+    if(a+b+c+d==7) cout << a << "+" << b << "+" << c << "+" << d << "=7\n";
+    else if(a-b-c-d==7) cout <<a<<"-"<<b<<"-"<<c<<"-"<<d<< "=7\n";
+    else if(a+b+c-d==7) cout <<a<<"+"<<b<<"+"<<c<<"-"<<d<< "=7\n";
+    else if(a+b-c+d==7) cout <<a<<"+"<<b<<"-"<<c<<"+"<<d<< "=7\n";
+    else if(a-b+c+d==7) cout <<a<<"-"<<b<<"+"<<c<<"+"<<d<< "=7\n";
+    else if(a-b-c+d==7) cout <<a<<"-"<<b<<"-"<<c<<"+"<<d<< "=7\n";
+    else if(a-b+c-d==7) cout <<a<<"-"<<b<<"+"<<c<<"-"<<d<< "=7\n";
+    else if(a+b-c-d==7) cout <<a<<"+"<<b<<"-"<<c<<"-"<<d<< "=7\n";
 
     
     
