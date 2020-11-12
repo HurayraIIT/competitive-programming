@@ -1,3 +1,11 @@
+
+// Problem: A. Boring Apartments
+// Contest: Codeforces - Codeforces Round #677 (Div. 3)
+// URL: https://codeforces.com/contest/1433/problem/A
+// Memory Limit: 256 MB
+// Time Limit: 1000 ms
+// Powered by CP Editor (https://github.com/cpeditor/cpeditor)
+
 #include<bits/stdc++.h>
 using namespace std;
 
