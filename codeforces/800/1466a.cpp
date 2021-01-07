@@ -1,5 +1,7 @@
-// Abu Hurayra (HurayraIIT)
-// IIT, Jahangirnagar University
+/**** Bismillahir Rahmanir Rahim
+	* Abu Hurayra (HurayraIIT) - hurayraiit@gmail.com
+	* Jahangirnagar University - 03.01.2021 16:24:05 +06
+*****/
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -31,7 +33,28 @@ typedef vector <pair<int, int> > vpii;
 int main()
 {
     fast_io
-    
+    int t ;
+    cin >> t ;
+    while (t--) {
+		int n ;
+		cin >> n ;
+		int a[n] ;
+		for (int i = 0 ; i < n ; i++ ) {
+			cin >> a[i] ;
+		}
+		
+		set<int> s;
+		
+		for (int i = 0 ; i < n-1 ; i++ ) {
+			for (int j = i+1 ; j < n ; j++ ) {
+				s.insert (a[j] - a[i]);
+			}
+		}
+		
+		// cout << "test "; 
+		cout << s.size() << endl;
+		
+	}
 	
 	
     
@@ -40,3 +63,4 @@ int main()
 
 
  
+

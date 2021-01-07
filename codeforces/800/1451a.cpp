@@ -1,5 +1,7 @@
-// Abu Hurayra (HurayraIIT)
-// IIT, Jahangirnagar University
+/**** Bismillahir Rahmanir Rahim
+	* Abu Hurayra (HurayraIIT) - hurayraiit@gmail.com
+	* Jahangirnagar University - 04.01.2021 13:25:02 +06
+*****/
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -32,7 +34,34 @@ int main()
 {
     fast_io
     
-	
+	int64 t, n;
+	cin >> t ;
+	while(t--) {
+		cin >> n ;
+		int64 sol = 0 ;
+		while(n>=1) {
+			if (n==1) break;
+			if (n==5) {
+				sol = 3;
+				break;
+			}
+			
+			if (n%2==0) {
+				if(n==2) n = 1;
+				else n = 2;
+				sol++; continue;
+			}
+			
+			//if (sqrt(n)*sqrt(n)==n ) {
+				//n = sqrt(n);
+				//sol++; continue;
+			//}
+			
+			n--;
+			sol++;
+		}
+		cout << sol << endl;
+	}
 	
     
     return 0;
@@ -40,3 +69,15 @@ int main()
 
 
  
+/*
+0
+1
+2
+2
+3
+2
+3
+2
+3
+2
+*/

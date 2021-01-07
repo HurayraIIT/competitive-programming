@@ -1,5 +1,7 @@
-// Abu Hurayra (HurayraIIT)
-// IIT, Jahangirnagar University
+/**** Bismillahir Rahmanir Rahim
+	* Abu Hurayra (HurayraIIT) - hurayraiit@gmail.com
+	* Jahangirnagar University - 03.01.2021 18:48:24 +06
+*****/
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -31,7 +33,29 @@ typedef vector <pair<int, int> > vpii;
 int main()
 {
     fast_io
-    
+    int t, n;
+    cin >> t ;
+    while (t--) {
+		cin >> n ;
+		char ch ;
+		int r[n] , b[n] ;
+		rep(i,n) {
+			cin >> ch ;
+			r[i] = ch - '0' ;
+		}
+		rep(i,n) {
+			cin >> ch ;
+			b[i] = ch - '0' ;
+		}
+		int RED = 0 , BLUE = 0 ;
+		rep(i,n) {
+			if (r[i] > b[i]) RED++;
+			else if (r[i] < b[i]) BLUE++;
+		}
+		if (RED == BLUE) cout << "EQUAL\n";
+		else if (RED > BLUE) cout << "RED\n";
+		else cout << "BLUE\n";
+	}
 	
 	
     
@@ -40,3 +64,4 @@ int main()
 
 
  
+

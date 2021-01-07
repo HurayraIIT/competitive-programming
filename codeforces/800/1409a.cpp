@@ -1,5 +1,7 @@
-// Abu Hurayra (HurayraIIT)
-// IIT, Jahangirnagar University
+/**** Bismillahir Rahmanir Rahim
+	* Abu Hurayra (HurayraIIT) - hurayraiit@gmail.com
+	* Jahangirnagar University - 04.01.2021 12:49:54 +06
+*****/
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -31,7 +33,13 @@ typedef vector <pair<int, int> > vpii;
 int main()
 {
     fast_io
-    
+    int64 t, a, b;
+    cin >> t ;
+    while(t--) {
+		cin >> a >> b ;
+		int64 s = abs(a-b) ;
+		cout << (s+9)/10 << endl;
+	}
 	
 	
     
@@ -40,3 +48,4 @@ int main()
 
 
  
+

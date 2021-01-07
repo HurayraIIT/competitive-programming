@@ -1,5 +1,7 @@
-// Abu Hurayra (HurayraIIT)
-// IIT, Jahangirnagar University
+/**** Bismillahir Rahmanir Rahim
+	* Abu Hurayra (HurayraIIT) - hurayraiit@gmail.com
+	* Jahangirnagar University - 04.01.2021 13:45:45 +06
+*****/
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -32,7 +34,19 @@ int main()
 {
     fast_io
     
-	
+	int n;
+	cin >> n ;
+	int a[n] ;
+	int chest = 0, biceps = 0 , back = 0 ;
+	rep(i,n) {
+		cin >> a[i];
+		if (i%3==0) chest += a[i];
+		else if (i%3==1) biceps += a[i];
+		else if (i%3==2) back += a[i];
+	}
+	if (chest>biceps && chest>back) cout << "chest\n";
+	else if(biceps>chest && biceps>back) cout << "biceps\n";
+	else cout << "back\n";
 	
     
     return 0;
@@ -40,3 +54,4 @@ int main()
 
 
  
+

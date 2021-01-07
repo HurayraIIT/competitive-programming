@@ -1,5 +1,7 @@
-// Abu Hurayra (HurayraIIT)
-// IIT, Jahangirnagar University
+/**** Bismillahir Rahmanir Rahim
+	* Abu Hurayra (HurayraIIT) - hurayraiit@gmail.com
+	* Jahangirnagar University - 04.01.2021 13:00:25 +06
+*****/
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -31,7 +33,25 @@ typedef vector <pair<int, int> > vpii;
 int main()
 {
     fast_io
-    
+    int t, n;
+    cin >> t ;
+    while(t--) {
+		cin >> n ;
+		int a[27] = {0} ;
+		rep(i,n) {
+			string s ;
+			cin >> s ;
+			rep(j,int(s.size())) {
+				a[s[j]-'a'+1]++;
+			}
+		}
+		bool flg = true;
+		rep2(i,1,26) {
+			if(a[i]%n!=0) flg = false;
+		}
+		if(flg) cout << "YES\n" ;
+		else cout << "NO\n";
+	}
 	
 	
     
@@ -40,3 +60,4 @@ int main()
 
 
  
+

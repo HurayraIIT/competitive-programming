@@ -1,5 +1,7 @@
-// Abu Hurayra (HurayraIIT)
-// IIT, Jahangirnagar University
+/**** Bismillahir Rahmanir Rahim
+	* Abu Hurayra (HurayraIIT) - hurayraiit@gmail.com
+	* Jahangirnagar University - 04.01.2021 13:53:25 +06
+*****/
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -31,7 +33,13 @@ typedef vector <pair<int, int> > vpii;
 int main()
 {
     fast_io
-    
+    int64 t,x,y;
+    cin >> t;
+    while(t--) {
+		cin >> x >> y ;
+		if(x==y || abs(x-y)==1) cout << x+y << endl;
+		else cout << 2*max(x,y)-1 << endl;
+	}
 	
 	
     
@@ -40,3 +48,4 @@ int main()
 
 
  
+

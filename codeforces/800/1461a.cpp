@@ -1,5 +1,7 @@
-// Abu Hurayra (HurayraIIT)
-// IIT, Jahangirnagar University
+/**** Bismillahir Rahmanir Rahim
+	* Abu Hurayra (HurayraIIT) - hurayraiit@gmail.com
+	* Jahangirnagar University - 03.01.2021 18:42:01 +06
+*****/
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -31,7 +33,17 @@ typedef vector <pair<int, int> > vpii;
 int main()
 {
     fast_io
-    
+    int t, n, k;
+    cin >> t ;
+    while (t--) {
+		cin >> n >> k ;
+		rep (i, n) {
+			if (i % 3 == 0 ) cout << "a" ;
+			else if (i % 3 == 1 ) cout << "b" ;
+			else cout << "c" ;
+		}
+		cout << endl;
+	}
 	
 	
     
@@ -40,3 +52,4 @@ int main()
 
 
  
+

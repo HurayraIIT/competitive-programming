@@ -1,5 +1,7 @@
-// Abu Hurayra (HurayraIIT)
-// IIT, Jahangirnagar University
+/**** Bismillahir Rahmanir Rahim
+	* Abu Hurayra (HurayraIIT) - hurayraiit@gmail.com
+	* Jahangirnagar University - 04.01.2021 12:54:38 +06
+*****/
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -31,7 +33,17 @@ typedef vector <pair<int, int> > vpii;
 int main()
 {
     fast_io
-    
+    int t, x;
+    cin >> t ;
+    while(t--) {
+		cin >> x ;
+		int ans = ((x%10)-1) * 10 ;
+		if (x<10) ans++;
+		else if(x<100) ans += 3 ;
+		else if(x<1000) ans += 6;
+		else ans += 10 ;
+		cout << ans <<endl;
+	}
 	
 	
     
@@ -40,3 +52,4 @@ int main()
 
 
  
+

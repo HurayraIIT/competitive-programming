@@ -1,5 +1,7 @@
-// Abu Hurayra (HurayraIIT)
-// IIT, Jahangirnagar University
+/**** Bismillahir Rahmanir Rahim
+	* Abu Hurayra (HurayraIIT) - hurayraiit@gmail.com
+	* Jahangirnagar University - 04.01.2021 13:21:25 +06
+*****/
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -32,7 +34,9 @@ int main()
 {
     fast_io
     
-	
+	int64 n;
+	cin >> n ;
+	cout << (n*n)+(n-1)*(n-1) << endl;
 	
     
     return 0;
@@ -40,3 +44,4 @@ int main()
 
 
  
+

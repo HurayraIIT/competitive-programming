@@ -1,5 +1,7 @@
-// Abu Hurayra (HurayraIIT)
-// IIT, Jahangirnagar University
+/**** Bismillahir Rahmanir Rahim
+	* Abu Hurayra (HurayraIIT) - hurayraiit@gmail.com
+	* Jahangirnagar University - 03.01.2021 19:09:06 +06
+*****/
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -32,6 +34,22 @@ int main()
 {
     fast_io
     
+    int t, n, m ;
+    cin >> t ;
+    while (t--) {
+		cin >> n >> m ;
+		int a ;
+		unordered_set<int> s;
+		rep (i,n) {
+			cin >> a ;
+			s.insert(a) ;
+		}
+		rep (i,m) {
+			cin >> a ;
+			s.insert(a) ;
+		}  
+		cout << n+m - s.size() << endl;
+	}
 	
 	
     
@@ -40,3 +58,4 @@ int main()
 
 
  
+

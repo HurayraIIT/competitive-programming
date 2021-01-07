@@ -1,5 +1,7 @@
-// Abu Hurayra (HurayraIIT)
-// IIT, Jahangirnagar University
+/**** Bismillahir Rahmanir Rahim
+	* Abu Hurayra (HurayraIIT) - hurayraiit@gmail.com
+	* Jahangirnagar University - 03.01.2021 18:21:16 +06
+*****/
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -32,7 +34,24 @@ int main()
 {
     fast_io
     
-	
+	int t ;
+	cin >> t;
+	while(t--) {
+		int n ;
+		cin >> n ;
+		int a[n] ;
+		rep (i, n) {
+			cin >> a[i] ;
+		}
+		int sol = 0 ;
+		for (int i = n-1 ; i >= 0 ; i-- ) {
+			if (i == n-1) { a[i]++ ; sol++ ; continue ; }
+			if (a[i+1]-a[i]>1) { a[i]++ ; sol++ ; continue ; }
+			if (a[i+1]-a[i]==1) { sol++ ; continue; }
+			else continue ;
+		}
+		cout << sol << endl;
+	}
 	
     
     return 0;
@@ -40,3 +59,4 @@ int main()
 
 
  
+
