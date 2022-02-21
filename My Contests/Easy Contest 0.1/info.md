@@ -13,3 +13,8 @@ Easy Math Problem
 ## Problem B - Tiny Arithmetic Sequence AtCoder - abc201_a 
 
 Easy Implementation Problem
+
+## Problem C - Three Dice AtCoder - abc202_a 
+
+Easy Math Problem
+
