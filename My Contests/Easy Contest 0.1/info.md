@@ -29,3 +29,7 @@ Easy Implementation Problem
 ## Problem F - kcal AtCoder - abc205_a 
 
 Easy Math Problem
+
+## Problem G - Maxi-Buying AtCoder - abc206_a 
+
+Easy Math Problem
