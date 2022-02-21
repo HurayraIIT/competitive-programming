@@ -9,3 +9,7 @@ Begin: 2022-02-21 10:10 AM BST
 ## Problem A - Century AtCoder - abc200_a 
 
 Easy Math Problem
+
+## Problem B - Tiny Arithmetic Sequence AtCoder - abc201_a 
+
+Easy Implementation Problem
